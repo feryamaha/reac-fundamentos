@@ -1,59 +1,98 @@
-import React, { useState, createContext } from 'react';// fixed
+import React, { useState, createContext, useEffect } from 'react';
 import Post from './Post';
 import Button from './Button';
 import Header from './Header';
 
+// Exemplo de Context API
 export const ThemeContext = createContext({
     theme: "dark",
-    onToggleTheme: () => {}
+    onToggleTheme: () => { }
 });
 
 function App() {
+    // Exemplo de useState para gerenciamento de estado local
     const [theme, setTheme] = useState("dark");
     const [posts, setPosts] = useState([
-        { id: Math.random(), name: "Fernando", subtitle: "Desenvolvedor Frontend | Especialista em React e Next.js", likes: 200, },
-        { id: Math.random(), name: "Javascript", subtitle: "Linguagem de programação interpretada e orientada a objetos", likes: 10, },
-        { id: Math.random(), name: "React", subtitle: "Biblioteca JavaScript para construção de interfaces de usuário", likes: 200, },
-        { id: Math.random(), name: "Next.js", subtitle: "Framework React para produção com renderização híbrida", likes: 10, },
-        { id: Math.random(), name: "Tailwind", subtitle: "Framework CSS utilitário para desenvolvimento rápido", likes: 10, },
-        { id: Math.random(), name: "Bootstrap", subtitle: "Framework CSS para desenvolvimento responsivo", likes: 10, },
+        {
+            id: Math.random(),
+            name: "useState",
+            subtitle: "Hook para gerenciamento de estado local em componentes funcionais",
+            likes: 200
+        },
+        {
+            id: Math.random(),
+            name: "useEffect",
+            subtitle: "Hook para lidar com efeitos colaterais e ciclo de vida",
+            likes: 150
+        },
+        {
+            id: Math.random(),
+            name: "useContext",
+            subtitle: "Hook para acessar valores de um contexto React",
+            likes: 100
+        },
+        {
+            id: Math.random(),
+            name: "Context API",
+            subtitle: "Sistema para compartilhar dados entre componentes",
+            likes: 180
+        },
+        {
+            id: Math.random(),
+            name: "Componentização",
+            subtitle: "Criação de componentes reutilizáveis e bem estruturados",
+            likes: 120
+        },
+        {
+            id: Math.random(),
+            name: "Webpack",
+            subtitle: "Empacotador de módulos para aplicações JavaScript",
+            likes: 90
+        }
     ]);
 
+    // Exemplo de useEffect para persistência de dados
+    useEffect(() => {
+        // Salva o tema no localStorage
+        localStorage.setItem('theme', theme);
+
+        // Atualiza o título da página
+        document.title = `React Fundamentals - ${theme} mode`;
+
+        // Função de limpeza
+        return () => {
+            console.log('Componente desmontado');
+        };
+    }, [theme]);
+
+    // Exemplo de função para manipulação de estado
     function handleToggleTheme() {
-        setTheme((prevState) =>
-        (prevState === "dark" ? "light" : "dark"
-        ));
+        setTheme(prevState => prevState === "dark" ? "light" : "dark");
     }
 
+    // Exemplo de função para adicionar novo post
     function handleRefresh() {
         setPosts(prevState => [
             ...prevState,
             {
                 id: Math.random(),
-                name: 'React${prevState.length + 1}',
-                subtitle: 'biblioteca de UI${prevState.length + 1}',
-                likes: 200,
-            }]);
+                name: `React Hook ${prevState.length + 1}`,
+                subtitle: `Exemplo prático de uso de Hooks ${prevState.length + 1}`,
+                likes: 0,
+            }
+        ]);
     }
 
+    // Exemplo de função para remover post
     function handleRemovePost(postId) {
-        setPosts((prevState) => (
-            prevState.filter(post => post.id !== postId)
-        ));
+        setPosts(prevState => prevState.filter(post => post.id !== postId));
     }
 
     return (
-
-        <ThemeContext.Provider
-            value={{ theme, onToggleTheme: handleToggleTheme, }}>
-
-            <Header
-            >
-                <h2>Curso de React JStack's
-                    <br />
-
-                </h2>
-                <Button onClick={handleRefresh}>Atualizar</Button>
+        <ThemeContext.Provider value={{ theme, onToggleTheme: handleToggleTheme }}>
+            <Header>
+                <h2>React Fundamentals - Exemplos Práticos</h2>
+                <Button onClick={handleRefresh}>Adicionar Hook</Button>
             </Header>
 
             <hr />
@@ -65,9 +104,8 @@ function App() {
                     post={post}
                 />
             ))}
-
         </ThemeContext.Provider>
-    )
+    );
 }
 
 export default App;
