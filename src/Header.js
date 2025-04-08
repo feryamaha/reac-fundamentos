@@ -11,6 +11,7 @@ export default function Header(props) {
             <Button onClick={onToggleTheme}>
                 Mudar tema
             </Button>
+            <br />
             {props.children}
         </>
     );
