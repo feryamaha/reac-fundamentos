@@ -1,0 +1,67 @@
+.profile-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.profile-name {
+    color: #2c3e50;
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.profile-role {
+    color: #34495e;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.profile-section {
+    margin-bottom: 2rem;
+}
+
+.profile-section h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.skills-list,
+.tools-list,
+.focus-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.skill-tag,
+.tool-tag,
+.focus-tag {
+    background-color: #3498db;
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.tool-tag {
+    background-color: #2ecc71;
+}
+
+.focus-tag {
+    background-color: #9b59b6;
+}
+
+.profile-status {
+    margin-top: 2rem;
+    padding: 1rem;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.profile-status p {
+    color: #34495e;
+    font-size: 1.1rem;
+    margin: 0;
+} 
