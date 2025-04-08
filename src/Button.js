@@ -1,23 +1,29 @@
 import React, { useContext } from 'react';
 import PropTypes from 'prop-types';
-
 import { ThemeContext } from './App';
 
 export default function Button(props) {
-
-    const { theme } = useContext(ThemeContext);
+    const { themeColors } = useContext(ThemeContext);
 
     return (
         <button
             onClick={props.onClick}
             style={{
-                backgroundColor: theme === "dark" ? "#fff" : "#000",
-                color: theme === "dark" ? "#000" : "#fff",
-                cursor: "pointer",
+                backgroundColor: themeColors.card,
+                color: themeColors.text,
+                width: '150px',
+                border: `1px solid ${themeColors.textSecondary}`,
+                margin: '1%',
+                padding: '8px 16px',
+                borderRadius: '4px',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease',
+                ':hover': {
+                    backgroundColor: themeColors.surface,
+                }
             }}
         >
             {props.children}
-
         </button>
     );
 }

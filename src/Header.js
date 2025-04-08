@@ -22,5 +22,5 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-    title: "fernando.developer frontend",
+    title: "Fernando Moreira - Desenvolvedor Frontend",
 };
