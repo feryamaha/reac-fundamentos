@@ -1,5 +1,7 @@
 # Fundamentos React - Projeto de Aprendizado
 
+Deploy: https://feryamaha.github.io/reac-fundamentos/
+
 Este projeto foi desenvolvido como parte do aprendizado dos fundamentos do React, explorando conceitos importantes como Context API, Hooks, Componentização e Gerenciamento de Estado. A utilização de ferramentas modernas de desenvolvimento permitiu criar uma aplicação robusta, escalável e de fácil manutenção.
 
 ## 📖 Conceitos Fundamentais
