@@ -6,7 +6,7 @@ import { ThemeContext } from './App';
 export default function Header(props) {
     const { onToggleTheme } = useContext(ThemeContext);
     return (
-        <>
+        <  >
             <h1>{props.title}</h1>
             <Button onClick={onToggleTheme}>
                 Mudar tema
@@ -23,5 +23,5 @@ Header.propTypes = {
 };
 
 Header.defaultProps = {
-    title: "Fernando Moreira - Desenvolvedor Frontend",
+    title: "fernando.dev frontend",
 };

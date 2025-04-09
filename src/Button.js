@@ -11,10 +11,10 @@ export default function Button(props) {
             style={{
                 backgroundColor: themeColors.card,
                 color: themeColors.text,
-                width: '150px',
+                width: '90px',
                 border: `1px solid ${themeColors.textSecondary}`,
                 margin: '1%',
-                padding: '8px 16px',
+                padding: '8px 4px',
                 borderRadius: '4px',
                 cursor: 'pointer',
                 transition: 'all 0.3s ease',

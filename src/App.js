@@ -369,17 +369,8 @@ npm install --save-dev html-webpack-plugin clean-webpack-plugin gh-pages`
                 display: 'flex',
                 flexDirection: 'column'
             }}>
-                <Header style={{ marginBottom: '20px' }}>
-                    {/* Botão "Adicionar Conceito" ocultado mas mantido no código
-                    <div style={{ display: 'flex', justifyContent: 'flex-start' }}>
-                        <Button 
-                            onClick={handleRefresh}
-                            style={{ width: '150px' }}
-                        >
-                            Adicionar Conceito
-                        </Button>
-                    </div>
-                    */}
+                <Header>
+
                 </Header>
 
                 <div style={{
