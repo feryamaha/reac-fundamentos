@@ -1,13 +1,16 @@
-# Fundamentos React - Projeto de Aprendizado
+# Fundamentos de React - Projeto de Aprendizado
 
+VER o read.me page DO PROJETO! 
 Deploy: https://feryamaha.github.io/reac-fundamentos/
 
 Este projeto foi desenvolvido como parte do aprendizado dos fundamentos do React, explorando conceitos importantes como Context API, Hooks, Componentização e Gerenciamento de Estado. A utilização de ferramentas modernas de desenvolvimento permitiu criar uma aplicação robusta, escalável e de fácil manutenção.
 
 ## 📖 Conceitos Fundamentais
 
-### O que são Hooks?
-Hooks são funções especiais do React que permitem "conectar" funcionalidades de estado e ciclo de vida do React a componentes funcionais. Antes dos Hooks, essas funcionalidades só estavam disponíveis em componentes de classe. Os principais benefícios são:
+### HOOKS!
+Os Hooks permitem que você use diferentes recursos do React a partir dos seus componentes. 
+Você pode usar os Hooks integrados ou combiná-los para criar os seus próprios. 
+Os principais benefícios são:
 
 - **Reutilização de Lógica**: Permitem extrair lógica de estado e efeitos colaterais para funções reutilizáveis
 - **Componentes Mais Simples**: Substituem a complexidade dos componentes de classe
